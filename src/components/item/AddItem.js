@@ -64,7 +64,8 @@ class AddItem extends Component {
             <span>Category</span>
             <input name="category" type="text" value={this.state.category} onChange={this.handleInputChange} />
           </label>
-          <label htmlFor="price" className={this.state.priceErr}><span>Price</span>
+          <label htmlFor="price" className={this.state.priceErr}>
+            <span>Price</span>
             <input name="price" type="number" min="0" max="999" step=".01" value={this.state.price} onChange={this.handleInputChange} />
           </label>
           <button type="submit">
@@ -75,8 +76,8 @@ class AddItem extends Component {
     )
   }
 }
-// eslint-disable-next-line react/no-typos
-AddItem.proptypes = {
+
+AddItem.propTypes = {
   addItem: PropTypes.func.isRequired,
 }
 const mapDispatchToProps = dispatch => ({
