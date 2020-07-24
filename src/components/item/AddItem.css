@@ -1,0 +1,9 @@
+#add-item-form label, #add-item-form button{
+    display: inline-block;
+    vertical-align: bottom;
+    margin:5px 15px 5px 0;
+}
+
+#add-item-form label.error input{
+    border: solid 1px #f00;
+}

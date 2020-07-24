@@ -1,0 +1,27 @@
+.row{ 
+    display: block;
+}
+
+.cell{
+    display: inline-block;
+    width: 150px;
+    padding: 10px;
+    border: solid 1px;
+    vertical-align: bottom;
+    margin: 2px;
+    min-height: 20px;
+}
+
+.number {
+    text-align: right;
+}
+
+.action {
+    padding: 5px;
+    width: 24px;
+}
+
+.action span {
+    cursor: pointer;
+    display: block;
+}

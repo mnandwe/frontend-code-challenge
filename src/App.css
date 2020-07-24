@@ -21,3 +21,12 @@
 .app-content {
   margin: 16px;
 }
+
+label>span{
+  font-weight: bold;
+}
+
+label>span, label>input{
+  display:block;
+  padding: 5px;
+}
