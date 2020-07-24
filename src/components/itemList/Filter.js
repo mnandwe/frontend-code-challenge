@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { setFilter } from '../../redux/actions';
 import './Filter.css'
-
+/**
+ * Renders filter options to show a single category 
+ */
 class FilterCategory extends Component {
   
   constructor(){

@@ -15,9 +15,9 @@ class App extends Component {
           <div className="app-header-title">Bridgit - Frontend code challenge</div>
         </header>
         <section className="app-content">
-          <AddItem/>
-          <FilterCategory/>
-          <ItemList/>
+          <AddItem />
+          <FilterCategory />
+          <ItemList />
         </section>
       </div>
     );

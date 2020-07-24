@@ -27,12 +27,12 @@ class ItemList extends Component {
 
   ascDescIcon(field) {
     if (this.props.orderBy.by === field && this.props.orderBy.order === ASC) {
-      return (<span className="icon"><ArrowUpwardIcon/></span>)
-    } else if (this.props.orderBy.by === field && this.props.orderBy.order === DESC)  {
-      return (<span className="icon"><ArrowDownwardIcon/></span>)
+      return (<span className="icon"><ArrowUpwardIcon /></span>)
+    } else if (this.props.orderBy.by === field && this.props.orderBy.order === DESC) {
+      return (<span className="icon"><ArrowDownwardIcon /></span>)
     }
     return
-    
+
   }
 
   render() {
@@ -53,7 +53,7 @@ class ItemList extends Component {
           </div>
         </div>
         {this.props.items && this.props.items.map((item, index) => (
-          <Item key={index+'_'+item.item + '_' + item.category + item.price} item={item} />
+          <Item key={index + '_' + item.item + '_' + item.category + item.price} item={item} />
         ))}
       </div>
     );
@@ -77,9 +77,9 @@ ItemList.propTypes = {
 };
 
 const getFilteredList = (items, filter) => {
-  if (filter===ALL) {
+  if (filter === ALL) {
     return items;
-  }else {
+  } else {
     return items.filter((item) => item.category === filter);
   }
 }
@@ -97,14 +97,14 @@ const sortList = (items, sortParams) => {
       }
     });
   } else if (by !== '') {
-    return [...items].sort((a,b) => {
+    return [...items].sort((a, b) => {
       var nameA = a[by].toLowerCase(); // ignore upper and lowercase
       var nameB = b[by].toLowerCase(); // ignore upper and lowercase
-      if (nameA < nameB ) {
-        return order === ASC? -1: 1;
+      if (nameA < nameB) {
+        return order === ASC ? -1 : 1;
       }
       if (nameA > nameB) {
-        return order === ASC ? 1: -1;
+        return order === ASC ? 1 : -1;
       }
       return 0;
     });
@@ -116,8 +116,8 @@ const mapStateToProps = (state) => {
   if (state.manageItems.items.length > 0) {
     return {
       items: sortList(
-              getFilteredList(state.manageItems.items, state.filter),
-               state.sort),
+        getFilteredList(state.manageItems.items, state.filter),
+        state.sort),
       orderBy: state.sort
     };
   } else {

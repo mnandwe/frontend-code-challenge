@@ -1,7 +1,7 @@
 import { CREATE_ITEM, REMOVE_ITEM } from '../actionTypes';
 
 const addCategory = (categoryList, newCategory) => {
-    if (categoryList.indexOf(newCategory) > -1){
+    if (categoryList.indexOf(newCategory) > -1) {
         return [
             ...categoryList
         ];
@@ -12,15 +12,15 @@ const addCategory = (categoryList, newCategory) => {
     ];
 }
 const removeCategory = (categoryList, newCategory) => {
-    return categoryList.filter( cat => cat !== newCategory);
+    return categoryList.filter(cat => cat !== newCategory);
 }
 
 
 const removeItem = (itemList, oldItem) => {
     return itemList.filter((item) => {
-        return !( item.item === oldItem.item 
-            && item.category === oldItem.category 
-            && item.price === oldItem.price );
+        return !(item.item === oldItem.item
+            && item.category === oldItem.category
+            && item.price === oldItem.price);
     });
 }
 

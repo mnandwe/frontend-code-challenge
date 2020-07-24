@@ -27,8 +27,8 @@ class AddItem extends Component {
     const value = event.target.value;
     const name = event.target.name;
 
-    if(name === 'price'){
-      this.setState({priceErr:''})
+    if (name === 'price') {
+      this.setState({ priceErr: '' })
     }
 
     this.setState({
@@ -45,8 +45,8 @@ class AddItem extends Component {
       price: parseFloat(this.state.price),
     };
 
-    if( !item.price ) {// for older browser, don't add if price is negative
-      this.setState({priceErr:'error'})
+    if (!item.price) {// for older browser, don't add if price is negative
+      this.setState({ priceErr: 'error' })
       return;
     }
     this.props.addItem(item);
@@ -68,7 +68,7 @@ class AddItem extends Component {
             <input name="price" type="number" min="0" max="999" step=".01" value={this.state.price} onChange={this.handleInputChange} />
           </label>
           <button type="submit">
-            <AddIcon /> 
+            <AddIcon />
           </button>
         </form>
       </div>
